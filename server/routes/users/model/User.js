@@ -9,12 +9,11 @@ const UserSchema = new mongoose.Schema({
 
     age: {
         type: Number,
-        default: 0
+        default: 1
     },
 
     favoriteMovie: {
-        type: Array,
-        required: [true, "A favorite movie is required!"]
+        type: Array
     }
 
 }, { timestamps: true })
