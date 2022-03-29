@@ -6,7 +6,7 @@ function CreateUser(props) {
     return (
         <div className='App'>
 
-            <h1>Create User:</h1>
+            <h1>Create User:</h1><br/>
 
             <div className="form-group">
                 <label>Name : </label>
@@ -23,7 +23,9 @@ function CreateUser(props) {
                 <input className='form-control' type="text" name="favoriteMovie" value={ props.favoriteMovieProp } onChange={ props.changeHandlerMovieProp }/><br/>
             </div>
 
-            <button className='btn btn-primary'>Submit</button>
+            <button className='btn btn-primary' onClick={ props.clickHandlerCreateProp }>Create User</button><br/><br/>
+
+            <h3 style={{color: "red"}}>{ props.messageCreateProp }</h3>
         
         </div>
     )

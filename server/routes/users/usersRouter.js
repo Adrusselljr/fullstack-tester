@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { createUser, getOneUser, updateUser, deleteUser } = require('./controller/UsersController')
+const { createUser, getAllUsers, getOneUser, updateUser, deleteUser } = require('./controller/UsersController')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/create-user', createUser)
+router.get('/get-all-users', getAllUsers)
 router.get('/get-user/:id', getOneUser)
 router.put('/update-user/:id', updateUser)
 router.delete('/delete-user/:id', deleteUser)

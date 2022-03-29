@@ -9,25 +9,42 @@ const createUser =  async (req, res) => {
             age: age,
             favoriteMovie: favoriteMovie
         })
+        console.log(req.body)
         const savedUser = await newUser.save()
         res
             .status(200)
             .json({ message: "User has been created", payload: savedUser })
     }
     catch (err) {
+        console.log(err)
         res.status(500).json({ message: "error", error: err })
+    }
+}
+
+// Get all users
+const getAllUsers = async (req, res) => {
+    try {
+        let allUsers = await User.find()
+        res.status(200).json({ payload: allUsers })
+    }
+    catch (err) {
+        console.log(err)
+        res.status(500).json({ message: "error", error: err.message })
     }
 }
 
 // Get one user
 const getOneUser = async (req, res) => {
     const { id } = req.params
+    console.log(typeof id)
+    console.log("id "+ id)
     try {
         let oneUser = await User.findById(id)
         res.status(200).json({ payload: oneUser })
     }
     catch (err) {
-        res.status(500).json(err)
+        console.log(err)
+        res.status(500).json({ message: "error", error: err.message })
     }
 }
 
@@ -40,6 +57,7 @@ const updateUser = async (req, res) => {
         res.status(200).json({ message: "User has been updated", payload: updateUser })
     }
     catch (err) {
+        console.log(err)
         res.status(500).json({ message: "error", error: err.message })
     }
 }
@@ -49,16 +67,18 @@ const deleteUser = async (req, res) => {
     const { id } = req.params
     try {
         let deleteUser = await User.findByIdAndDelete(id)
-        if(deleteUser === null) throw new Error("No User with id found!")
+        if(deleteUser === null) throw new Error("No user with id found!")
         res.status(200).json({ message: "User has been deleted", payload: deleteUser })
     }
     catch (err) {
+        console.log(err)
         res.status(500).json({ message: "error", error: err.message })
     }
 }
 
 module.exports = {
     createUser,
+    getAllUsers,
     getOneUser,
     updateUser,
     deleteUser
