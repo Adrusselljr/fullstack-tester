@@ -18,6 +18,7 @@ export class App extends Component {
         fetchedAge: 1,
         fetchedFavoriteMovie: [],
         userId: "",
+        userId2: "",
         messageCreate: "",
         messageUpdate: "",
         messageDelete: "",
@@ -241,7 +242,7 @@ export class App extends Component {
             <br/><p>--------------------------------------------------------------------------------------------------</p><br/>
 
             <DeleteUser
-                userIdProp2={ this.state.userId }
+                userIdProp2={ this.state.userId2 }
                 changeHandlerUserIdProp={ this.changeHandlerUserId }
                 clickHandlerDeleteProp={ this.clickHandlerDelete }
                 messageDeleteProp={ this.state.messageDelete }
