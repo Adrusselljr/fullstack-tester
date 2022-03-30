@@ -156,13 +156,13 @@ export class App extends Component {
         if(responseData.message === "error") {
             this.setState({
                 messageDelete: responseData.error,
-                userId: ""
+                userId2: ""
             })
         }
         else {
             this.setState({
                 messageDelete: responseData.message,
-                userId: ""
+                userId2: ""
             })
         }
         setTimeout(() => {
