@@ -10,7 +10,7 @@ function DeleteUser(props) {
 
             <div className="form-group">
                 <label>ID : </label>
-                <input className='form-control' type="text" name="id" value={ props.userIdProp2 } onChange={ props.changeHandlerUserIdProp }/><br/>
+                <input className='form-control' type="text" name="id" value={ props.userIdProp2 } onChange={ props.changeHandlerUserId2Prop }/><br/>
             </div>
 
             <button className='btn btn-primary' onClick={ () => props.clickHandlerDeleteProp(props.userIdProp2) }>Delete User</button><br/><br/>

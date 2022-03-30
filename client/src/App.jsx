@@ -68,6 +68,12 @@ export class App extends Component {
         })
     }
 
+    changeHandlerUserId2 = e => {
+        this.setState({
+            userId2: e.target.value
+        })
+    }
+
     clickHandlerCreate = async () => {
         const {name, age, favoriteMovie} = this.state
 
@@ -243,7 +249,7 @@ export class App extends Component {
 
             <DeleteUser
                 userIdProp2={ this.state.userId2 }
-                changeHandlerUserIdProp={ this.changeHandlerUserId }
+                changeHandlerUserId2Prop={ this.changeHandlerUserId2 }
                 clickHandlerDeleteProp={ this.clickHandlerDelete }
                 messageDeleteProp={ this.state.messageDelete }
             />
