@@ -13,7 +13,7 @@ function DeleteUser(props) {
                 <input className='form-control' type="text" name="id" value={ props.userIdProp2 } onChange={ props.changeHandlerUserIdProp }/><br/>
             </div>
 
-            <button className='btn btn-primary' onClick={ () => props.clickHandlerDeleteProp(props.userIdProp) }>Delete User</button><br/><br/>
+            <button className='btn btn-primary' onClick={ () => props.clickHandlerDeleteProp(props.userIdProp2) }>Delete User</button><br/><br/>
 
             <h3 style={{color: "red"}}>{ props.messageDeleteProp }</h3>
         
