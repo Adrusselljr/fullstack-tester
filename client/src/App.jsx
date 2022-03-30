@@ -6,7 +6,7 @@ import GetAllUsers from './components/GetAllUsers'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const url = "http://localhost:4000/users"
+const url = "https://enigmatic-temple-62849.herokuapp.com/users"
 
 export class App extends Component {
 
