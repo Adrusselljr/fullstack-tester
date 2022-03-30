@@ -40,7 +40,7 @@ export class App extends Component {
 
     changeHandlerMovie = e => {
         this.setState({
-            favoriteMovie: e.target.value.split(',')
+            favoriteMovie: e.target.value.split(', ')
         })
     }
 
@@ -58,7 +58,7 @@ export class App extends Component {
 
     changeHandlerFetchedMovie = e => {
         this.setState({
-            fetchedFavoriteMovie: e.target.value.split(',')
+            fetchedFavoriteMovie: e.target.value.split(', ')
         })
     }
 
