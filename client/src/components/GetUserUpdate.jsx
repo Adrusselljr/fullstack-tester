@@ -29,7 +29,7 @@ function GetUserUpdate(props) {
 
             <div className="form-group">
                 <label>Favorite Movies : </label>
-                <input className='form-control' type="text" name="fetchedFavoriteMovie" value={ props.fetchedFavoriteMovieProp } onChange={ props.changeHandlerFetchedMovieProp }/><br/>
+                <input placeholder='Please use format: Movie,Movie,...' className='form-control' type="text" name="fetchedFavoriteMovie" value={ props.fetchedFavoriteMovieProp } onChange={ props.changeHandlerFetchedMovieProp }/><br/>
             </div>
 
             <button className='btn btn-primary' onClick={ () => props.clickHandlerUpdateProp(props.userIdProp) }>Update User</button><br/><br/>

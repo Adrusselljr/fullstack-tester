@@ -20,7 +20,7 @@ function CreateUser(props) {
 
             <div className="form-group">
                 <label>Favorite Movies : </label>
-                <input className='form-control' type="text" name="favoriteMovie" value={ props.favoriteMovieProp } onChange={ props.changeHandlerMovieProp }/><br/>
+                <input placeholder='Please use format: Movie,Movie,...' className='form-control' type="text" name="favoriteMovie" value={ props.favoriteMovieProp } onChange={ props.changeHandlerMovieProp }/><br/>
             </div>
 
             <button className='btn btn-primary' onClick={ props.clickHandlerCreateProp }>Create User</button><br/><br/>
